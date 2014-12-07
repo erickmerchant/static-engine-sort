@@ -1,0 +1,26 @@
+{
+  "name": "static-engine-sort",
+  "description": "Plugin for static-engine.",
+  "main": "index.js",
+  "repository": "erickmerchant/static-engine-sort",
+  "keywords": [
+    "static-engine"
+  ],
+  "author": "Erick Merchant <erickmerchant@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/erickmerchant/static-engine-sort/issues"
+  },
+  "homepage": "https://github.com/erickmerchant/static-engine-sort",
+  "dependencies": {
+    "es6-promise": "^2.0.0",
+    "moment": "^2.7.0"
+  },
+  "peerDependencies": {
+    "static-engine": "^5.0.0"
+  },
+  "devDependencies": {
+    "chai": "^1.9.2",
+    "mocha": "^2.0.1"
+  }
+}
