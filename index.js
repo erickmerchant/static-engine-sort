@@ -1,9 +1,8 @@
-var Promise = require('es6-promise').Promise;
 var now = require('moment')();
 
 module.exports = {
 
-    date: function (pages) {
+    date: function (pages, done) {
 
         pages.sort(function(a, b) {
 
@@ -14,6 +13,6 @@ module.exports = {
             return b.diff(a);
         });
 
-        return Promise.resolve(pages);
+        done(null, pages);
     }
 };
