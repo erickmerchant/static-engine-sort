@@ -1,6 +1,6 @@
 var now = require('moment')();
 
-function date_sort(pages) {
+function sortDate(pages, reverse) {
 
     pages.sort(function(a, b) {
 
@@ -8,25 +8,13 @@ function date_sort(pages) {
 
         b = b.date || now;
 
-        return b.diff(a);
+        return reverse ? b.diff(a) : a.diff(b);
     });
 
     return pages;
 }
 
-function date(pages, done) {
-
-    done(null, date_sort(pages));
-}
-
-date.desc = date;
-
-date.asc = function (pages, done) {
-
-    done(null, date_sort(pages).reverse());
-}
-
-function title_sort(pages) {
+function sortTitle(pages, reverse) {
 
     pages.sort(function(a, b) {
 
@@ -34,27 +22,37 @@ function title_sort(pages) {
 
         b = b.title || '';
 
-        return a.localeCompare(b);
+        return reverse ? b.localeCompare(a) : a.localeCompare(b);
     });
 
     return pages;
 }
 
-function title(pages, done) {
-
-    done(null, title_sort(pages));
-}
-
-title.asc = title;
-
-title.desc = function (pages, done) {
-
-    done(null, title_sort(pages).reverse());
-}
-
 module.exports = {
 
-    date: date,
+    date: {
 
-    title: title
+        asc: function (pages, done) {
+
+            done(null, sortDate(pages));
+        },
+
+        desc: function (pages, done) {
+
+            done(null, sortDate(pages, true));
+        }
+    },
+
+    title: {
+
+        asc: function (pages, done) {
+
+            done(null, sortTitle(pages));
+        },
+
+        desc: function (pages, done) {
+
+            done(null, sortTitle(pages, true));
+        }
+    }
 };
