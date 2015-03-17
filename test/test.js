@@ -1,4 +1,4 @@
-var assert = require('chai').assert;
+var assert = require('assert');
 var sort = require('../index.js');
 var moment = require('moment');
 
