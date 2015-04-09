@@ -1,6 +1,6 @@
 {
   "name": "static-engine-sort",
-  "description": "Plugin for static-engine.",
+  "description": "Plugin for static-engine. Sorts the collection using the provided sort function.",
   "main": "index.js",
   "repository": "erickmerchant/static-engine-sort",
   "keywords": [
@@ -18,5 +18,8 @@
   "devDependencies": {
     "mocha": "^2.0.1"
   },
-  "version": "3.1.0"
+  "version": "3.1.0",
+  "scripts": {
+    "test": "mocha"
+  }
 }
