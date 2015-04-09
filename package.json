@@ -12,9 +12,7 @@
     "url": "https://github.com/erickmerchant/static-engine-sort/issues"
   },
   "homepage": "https://github.com/erickmerchant/static-engine-sort",
-  "dependencies": {
-    "moment": "^2.7.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "mocha": "^2.0.1"
   },
