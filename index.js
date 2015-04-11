@@ -1,9 +1,7 @@
-module.exports = function(sorter) {
+module.exports = function (sorter) {
+  return function (pages, done) {
+    pages.sort(sorter)
 
-    return function (pages, done) {
-
-        pages.sort(sorter);
-
-        done(null, pages);
-    };
-};
+    done(null, pages)
+  }
+}

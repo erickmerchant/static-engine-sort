@@ -14,10 +14,11 @@
   "homepage": "https://github.com/erickmerchant/static-engine-sort",
   "dependencies": {},
   "devDependencies": {
-    "mocha": "^2.0.1"
+    "mocha": "^2.0.1",
+    "standard": "^3.5.0"
   },
   "version": "4.0.1",
   "scripts": {
-    "test": "mocha"
+    "test": "standard && mocha"
   }
 }
