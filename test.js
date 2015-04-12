@@ -1,7 +1,7 @@
 var assert = require('assert')
 var describe = require('mocha').describe
 var it = require('mocha').it
-var sort = require('../index.js')(function (a, b) {
+var sort = require('./index.js')(function (a, b) {
   return a.title.localeCompare(b.title)
 })
 
