@@ -19,6 +19,7 @@
   },
   "version": "4.2.2",
   "scripts": {
-    "test": "standard && mocha"
+    "test": "standard && mocha",
+    "cover": "istanbul cover node_modules/.bin/_mocha"
   }
 }
