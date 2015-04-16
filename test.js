@@ -9,7 +9,7 @@ describe('plugin', function () {
   it('it should sort using the provided function', function (done) {
     sort([{ title: 'réservé' }, { title: 'premier' }, { title: 'cliché' }, { title: 'communiqué' }, { title: 'café' }, { title: 'adieu' }], function (err, pages) {
       assert.equal(null, err)
-      
+
       assert.deepEqual(pages, [ { title: 'adieu' }, { title: 'café' }, { title: 'cliché' }, { title: 'communiqué' }, { title: 'premier' }, { title: 'réservé' } ])
 
       done()
