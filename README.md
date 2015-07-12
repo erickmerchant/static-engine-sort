@@ -5,25 +5,22 @@
 This is a plugin for [static-engine](https://github.com/erickmerchant/static-engine). Sorts the collection using the provided sort function.
 
 ```javascript
-
-var engine = require('static-engine');
-var sort = require('static-engine-sort');
-var pluginA = require('plugin-a');
+var engine = require('static-engine')
+var sort = require('static-engine-sort')
+var pluginA = require('plugin-a')
 
 engine([
-    pluginA,
-    sort(function(a, b) {
+  pluginA,
+  sort(function (a, b) {
+    if (a.property < b.property) {
+      return -1
+    }
 
-        if (a.property < b.property) {
-            return -1;
-        }
+    if (b.property < a.property) {
+      return 1
+    }
 
-        if (b.property < a.property) {
-            return 1;
-        }
-
-        return 0;
-    })
-]);
-
+    return 0
+  })
+])
 ```
