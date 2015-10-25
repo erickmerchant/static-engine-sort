@@ -14,7 +14,7 @@
   "homepage": "https://github.com/erickmerchant/static-engine-sort",
   "dependencies": {},
   "devDependencies": {
-    "istanbul": "^0.3.13",
+    "istanbul": "^0.4.0",
     "mocha": "^2.0.1",
     "standard": "^5.0.0"
   },
