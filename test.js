@@ -1,9 +1,9 @@
-var tap = require('tap')
+var test = require('tape')
 var sort = require('./index.js')(function (a, b) {
   return a.title.localeCompare(b.title)
 })
 
-tap.test('it should sort using the provided function', function (t) {
+test('it should sort using the provided function', function (t) {
   sort([{ title: 'réservé' }, { title: 'premier' }, { title: 'cliché' }, { title: 'communiqué' }, { title: 'café' }, { title: 'adieu' }], function (err, pages) {
     t.equal(null, err)
 
