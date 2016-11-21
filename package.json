@@ -15,7 +15,7 @@
   "dependencies": {},
   "devDependencies": {
     "faucet": "0.0.1",
-    "nyc": "^8.1.0",
+    "nyc": "^9.0.1",
     "standard": "^8.0.0",
     "tape": "^4.6.0"
   },
